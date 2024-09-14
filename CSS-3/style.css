@@ -1,0 +1,54 @@
+#bmodel {
+
+    width: 400px;
+    border: 5px solid maroon;
+    padding: 10px;
+    margin: 10px;
+  }
+
+.pstatic  {
+    position: static;
+    border: 5px solid #73AD21;
+    width: 300px;
+    padding: 15px;
+
+  }
+
+ .relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid maroon;
+  } 
+  
+.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }
+  
+
+  .fixed {position: fixed;
+  bottom: 0px;
+  right: 100px;
+  width: 300px;
+  padding: 5px;
+  border: 3px solid #73AD21;
+  }
+
+  .flex-container {
+    display: flex;
+    background-color: orange;
+  }
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+  
+  }
+
+  
