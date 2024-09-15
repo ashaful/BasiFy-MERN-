@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+
+.grid-container {
+  display: grid; 
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-container2 {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: maroon;
+    padding:  10px;
+}
+
+.grid-container3{
+    display: grid;
+    gap: 10px;
+  background-color: maroon;
+  padding: 10px;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+}
+
+.grid-container3 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+body {
+  background-color: lightgreen;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+</style>
+</head>
+<body>
+
+<h1>Grid Elements</h1>
+
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+
+<div class="grid-container">
+
+  <div class="grid-item">1</div>
+  <div class="grid-item">1</div>
+  <div class="grid-item">1</div>
+  <div class="grid-item">1</div>
+  <div class="grid-item">1</div>
+ 
+</div>
+
+<h3>Inline Grid</h3>
+
+<div class="grid-container2">
+
+    <div class="grid-item">1</div>
+    <div class="grid-item">1</div>
+    <div class="grid-item">1</div>
+    <div class="grid-item">1</div>
+    <div class="grid-item">1</div>
+   
+</div>
+
+<h3>Grid Layout</h3>
+
+<div class="grid-container3">
+  <div class="item1">Header</div>
+  <div class="item2">Menu</div>
+  <div class="item3">Main</div>  
+  <div class="item4">Right</div>
+  <div class="item5">Footer</div>
+</div>
+
+<p>Resize the browser window. When the width of this document is 600 pixels or less, the background-color is "lightblue", otherwise it is "lightgreen".</p>
+
+
+</body>
+</html>
